@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
+import Header from "@/components/header" // Import your header component
 
 export default function Home() {
   // Reference for the main container to track scroll progress
@@ -25,9 +26,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#e8e6e1] text-[#333333] font-sans overflow-hidden" ref={containerRef}>
+      {/* Fixed header that stays at the top */}
+      <div className="fixed top-0 left-0 w-full z-50">
+        <Header />
+      </div>
+
       {/* Spacer to allow scrolling */}
       <div className="h-[200vh]">
-        {/* Fixed container for animations */}
+        {/* Fixed container for animations - adjusted to account for header */}
         <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center">
           <div className="container mx-auto px-4 md:px-0 relative">
             <div className="flex flex-col md:flex-row md:items-center w-full">
