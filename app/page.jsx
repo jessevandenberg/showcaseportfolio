@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import Header from "@/components/header" // Import your header component
+import Header from "./components/Header"
 
 export default function Home() {
   // Reference for the main container to track scroll progress
