@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import Header from "./components/Header"
+import Link from "next/link"
 
 export default function Home() {
   // Reference for the main container to track scroll progress
@@ -19,22 +19,25 @@ export default function Home() {
   const firstTextX = useTransform(scrollYProgress, [0, 0.3], [0, -500]) // Move first text left
   const firstTextOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]) // Fade out first text
 
-  const imageX = useTransform(scrollYProgress, [0, 0.5], [0, -400]) // Move image from right to left
+  // Move image off to the left faster (adjusted timing)
+  const imageX = useTransform(scrollYProgress, [0, 0.4], [0, -1000])
 
-  const secondTextX = useTransform(scrollYProgress, [0.3, 0.6], [500, 0]) // Bring in new text from right
-  const secondTextOpacity = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]) // Fade in new text
+  // Start second text closer (reduced from 500 to 300) and bring it in sooner
+  const secondTextX = useTransform(scrollYProgress, [0.25, 0.5], [300, 0])
+  const secondTextOpacity = useTransform(scrollYProgress, [0.25, 0.5], [0, 1]) // Fade in new text
+
+  // Delay the fade-out to give more time to read (from 0.65 to 0.7)
+  const animationContainerOpacity = useTransform(scrollYProgress, [0.65, 0.7], [1, 0])
 
   return (
-    <main className="min-h-screen bg-[#e8e6e1] text-[#333333] font-sans overflow-hidden" ref={containerRef}>
-      {/* Fixed header that stays at the top */}
-      <div className="fixed top-0 left-0 w-full z-50">
-        <Header />
-      </div>
-
-      {/* Spacer to allow scrolling */}
-      <div className="h-[200vh]">
-        {/* Fixed container for animations - adjusted to account for header */}
-        <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center">
+    <main className="min-h-screen bg-[#e8e6e1] text-[#333333] font-sans" ref={containerRef}>
+      {/* Increased spacer height to allow more scrolling distance */}
+      <div className="h-[300vh]">
+        {/* Fixed container for animations - now with opacity animation */}
+        <motion.div
+          className="fixed top-0 left-0 w-full h-screen flex items-center justify-center"
+          style={{ opacity: animationContainerOpacity }}
+        >
           <div className="container mx-auto px-4 md:px-0 relative">
             <div className="flex flex-col md:flex-row md:items-center w-full">
               {/* First text - slides left and fades out */}
@@ -56,22 +59,16 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Image - moves from right to left */}
+              {/* Image - moves completely off to the left */}
               <motion.div className="flex justify-end w-full md:w-1/2" style={{ x: imageX }}>
                 <div>
-                  <Image
-                    src="/homepagina.png?height=400&width=400"
-                    alt="Project image"
-                    width={500}
-                    height={400}
-                    className="object-cover"
-                  />
+                  <Image src="/homepagina.png" alt="Project image" width={500} height={400} className="object-cover" />
                 </div>
               </motion.div>
 
               {/* Second text - slides in from right */}
               <motion.div
-                className="absolute top-0 right-0 md:w-1/2 px-4"
+                className="absolute top-50 right-0 md:w-1/2 px-4"
                 style={{
                   x: secondTextX,
                   opacity: secondTextOpacity,
@@ -89,8 +86,57 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Projects section - appears after scrolling */}
+      <section className="bg-[#e8e6e1] py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Project 1 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-full aspect-[4/3] bg-[#e2e2e2] mb-6">
+                <Image
+                  src="/placeholder.svg?height=300&width=400"
+                  alt="Brand a Band project"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-2xl font-medium mb-2">Brand a Band</h3>
+              <p className="text-center mb-3">
+                het designen van een band met
+                <br />
+                alle design vormen
+              </p>
+              <Link href="#" className="text-green-500 hover:underline">
+                zier meer
+              </Link>
+            </div>
+
+            {/* Project 2 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-full aspect-[4/3] bg-[#e2e2e2] mb-6">
+                <Image
+                  src="/placeholder.svg?height=300&width=400"
+                  alt="Starwars API project"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-2xl font-medium mb-2">starwars API</h3>
+              <p className="text-center mb-3">
+                het maken van een
+                <br />
+                characterzoekmachine met een API
+              </p>
+              <Link href="#" className="text-green-500 hover:underline">
+                zier meer
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

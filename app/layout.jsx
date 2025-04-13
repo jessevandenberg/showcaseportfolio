@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen overflow-x-hidden">
         <Header />
        
         {children}
