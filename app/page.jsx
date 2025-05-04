@@ -50,7 +50,7 @@ export default function Home() {
 
               {/* Afbeelding */}
               <motion.div className="flex justify-end w-full md:w-1/2" style={{ x: imageX }}>
-                <Image src="/homepagina.png" alt="Project afbeelding" width={500} height={400} className="object-cover" />
+                <Image src="/portfoliofoto.png" alt="Project afbeelding" width={500} height={400} className="object-cover" />
               </motion.div>
 
               {/* Projecten Intro */}
