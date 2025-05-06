@@ -81,7 +81,7 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-[4/3] bg-[#e2e2e2] mb-6">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="/Cover.png"
                   alt="Brand a Band project"
                   fill
                   className="object-cover"
