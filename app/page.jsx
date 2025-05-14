@@ -45,12 +45,13 @@ export default function Home() {
                     opacity: firstTextOpacity,
                   }}
                 >
-                  <h2 className="text-6xl font-normal">Introductie</h2>
+                  <h2 className="text-6xl font-normal">Over mij</h2>
                   <p className="text-xl mt-4 leading-tight">
-                    Welkom bij mijn projectportfolio. Op deze pagina geef ik een overzicht van de projecten waar ik aan
-                    heb gewerkt. Elk project toont mijn vaardigheden, creativiteit en leerproces binnen mijn vakgebied.
-                    Van concept tot uitvoering – mijn aanpak staat centraal. Ik streef naar kwaliteit, innovatie en
-                    samenwerking.
+                   Ik ben Jesse van den Berg, 19 jaar oud en student ICT aan Fontys, met een specialisatie in Media 
+                   – Front-End Design. Ik ben creatief en heb een passie voor het ontwerpen en bouwen van gebruiksvriendelijke
+                   en visueel aantrekkelijke websites en interfaces. In mijn vrije tijd ben ik vaak met sport bezig. Voetbal 
+                   is mijn favoriete sport, en in de winter ben ik op de piste te vinden om te skiën. Ik hou van afwisseling 
+                   tussen techniek, design en beweging — dat houdt mij scherp en gemotiveerd.
                   </p>
                 </motion.div>
 
