@@ -60,7 +60,7 @@ npm install
 npm run dev
 Open daarna je browser op http://localhost:3000.
 
-⚙️ Configuratie
+# Configuratie
 Omgevingsvariabelen kunnen worden toegevoegd in .env.local indien nodig.
 
 Aanpassingen aan Next.js kunnen worden gedaan in next.config.mjs.
