@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Jesse v/d Berg – Portfolio Showcase
 
-## Getting Started
+Overzicht
+Deze portfolio-website is ontworpen als een dynamisch en visueel aantrekkelijk platform om projecten te presenteren. Met behulp van scroll-gebaseerde animaties en een duidelijke structuur, biedt het bezoekers een overzicht van Jesse v/d Berg's werk, vaardigheden en creatieve proces.
+Het project is gebouwd met moderne webtechnologieën zoals Next.js, Tailwind CSS, en Framer Motion om een vloeiende gebruikerservaring te realiseren.
 
-First, run the development server:
+ Belangrijkste features
+Scroll-animaties: Gebruik van framer-motion voor dynamische tekst- en beeldtransities bij scrollen.
 
-```bash
+Projectweergave: Netjes georganiseerde projecten in een responsive grid.
+
+Component-based structuur: Herbruikbare componenten zoals ProjectCard, Header, en Projects.
+
+Responsief ontwerp: Geoptimaliseerd voor zowel desktop als mobiel gebruik.
+
+Sociale media integratie: Met iconen en links naar platforms als LinkedIn en Instagram.
+
+ Doel
+Deze applicatie dient als portfolio voor Jesse v/d Berg en toont zijn werk op een toegankelijke, professionele en visueel aantrekkelijke manier. Door gebruik te maken van animaties en heldere visuele structuren, wordt de aandacht van de bezoeker op de juiste plekken gelegd.
+
+ Gebruikte technologieën
+Applicatie
+Next.js
+
+JavaScript
+
+Tailwind CSS
+
+Framer Motion
+
+Development Tools
+Visual Studio Code
+
+Git & GitHub
+
+Vercel (Deployment)
+
+NPM
+
+ Installatie
+Vereisten
+Zorg dat je de volgende tools geïnstalleerd hebt:
+
+Node.js (LTS)
+
+npm
+
+Stappen
+bash
+Kopiëren
+Bewerken
+# Clone de repository
+git clone https://github.com/jouwgebruikersnaam/portfolio.git
+cd portfolio
+
+# Installeer dependencies
+npm install
+
+# Start de ontwikkelserver
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open daarna je browser op http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⚙️ Configuratie
+Omgevingsvariabelen kunnen worden toegevoegd in .env.local indien nodig.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Aanpassingen aan Next.js kunnen worden gedaan in next.config.mjs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ Scripts
+Command	Beschrijving
+npm run dev	Start de ontwikkelserver
+npm run build	Build voor productie
+npm start	Start de productieversie
+npm run lint	Code linten
 
-## Learn More
+ Bijdragen
+Contributies zijn welkom! Open een issue of maak een pull request aan voor suggesties of verbeteringen.
 
-To learn more about Next.js, take a look at the following resources:
+ Licentie
+Dit project is gelicenseerd onder de MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
