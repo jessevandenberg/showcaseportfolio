@@ -1,5 +1,5 @@
 Jesse v/d Berg – Portfolio Showcase
-<img src="public/portfoliofoto.png" alt="Portfolio Screenshot" />
+
 Overzicht
 Deze portfolio-website is ontworpen als een dynamisch en visueel aantrekkelijk platform om projecten te presenteren. Met behulp van scroll-gebaseerde animaties en een duidelijke structuur, biedt het bezoekers een overzicht van Jesse v/d Berg's werk, vaardigheden en creatieve proces.
 Het project is gebouwd met moderne webtechnologieën zoals Next.js, Tailwind CSS, en Framer Motion om een vloeiende gebruikerservaring te realiseren.
